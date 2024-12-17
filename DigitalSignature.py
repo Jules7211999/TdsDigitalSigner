@@ -1,3 +1,7 @@
+# Created by Jules Leomel Salvador
+# Software Engineer I
+# 10/2/2024
+
 import subprocess
 
 sign_tool = "kyosigntool.exe"
@@ -35,17 +39,18 @@ process = [
     oem_complete_command
 ]
 
-package_name = [ "KM", "TA", "OEM"]
+package_name = ["KM", "TA", "OEM"]
 
-print("\nStart Signing\n")
+print("\nCommencing Application Signing \n")
 
 package_index = 0
 
 for x in process:
+    print(" ".join(x)+ " \n")
     subprocess.run(" ".join(x))
-    print(package_name[package_index] + "\n")
+    print(package_name[package_index] + "signed\n")
     package_index+=1
     
 
-print("\nEnd of Signing\n")
+print("\nConcluding Application Signing \n")
 
