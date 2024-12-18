@@ -7,8 +7,8 @@ import subprocess
 sign_tool = "kyosigntool.exe"
 sign_tool_command = "sign"
 
-km_tds_path = "D:\\Perforce\\depot\Projects\\Web\TWAIN3\\WebPackage\\3.2\\KM\\ProductLib\\Scanner\\TWAIN\\TWAIN_3\\twn_drvr_sttngs"   
-ta_tds_path = "D:\\Perforce\\depot\Projects\\Web\TWAIN3\\WebPackage\\3.2\\TA\\ProductLib\\Scanner\\TWAIN\\TWAIN_3\\twn_drvr_sttngs"   
+km_tds_path = "D:\\Perforce\\depot\Projects\\Web\TWAIN3\\WebPackage\\3.1\\KM\\ProductLib\\Scanner\\TWAIN\\TWAIN_3\\twn_drvr_sttngs"   
+ta_tds_path = "D:\\Perforce\\depot\Projects\\Web\TWAIN3\\WebPackage\\3.1\\TA\\ProductLib\\Scanner\\TWAIN\\TWAIN_3\\twn_drvr_sttngs"   
 oem_tds_path ="D:\\Perforce\\depot\Projects\\Web\TWAIN3\\WebPackage\\3.2\\OEM\\ProductLib\\Scanner\\TWAIN\\TWAIN_3\\twn_drvr_sttngs"   
 
 sign_tool_description_argument= '--description "TDS 2.0"'
@@ -48,7 +48,7 @@ package_index = 0
 for x in process:
     print(" ".join(x)+ " \n")
     subprocess.run(" ".join(x))
-    print(package_name[package_index] + "signed\n")
+    print("\n" + package_name[package_index] + " Application signed\n")
     package_index+=1
     
 
